@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>LIST</title>
+</head>
+<body>
+
+<table align="center">
+
+    <tr>
+        <td>ID</td>
+        <td>MARK</td>
+        <td>MODEL</td>
+        <td>COLOR</td>
+    </tr>
+
+    <tr th:each="vehicle: ${vehicles}">
+        <td th:text="${vehicle.getId()}"></td>
+        <td th:text="${vehicle.getMark()}"></td>
+        <td th:text="${vehicle.getModel()}"></td>
+        <td th:text="${vehicle.getColor()}"></td>
+        <td><a th:href="@{/vehicles/modify/{id}(id=${vehicle.getId()})}">EDIT</a></td>
+        <td><a th:href="@{/vehicles/delete/{id}(id=${vehicle.getId()})}">DELETE</a></td>
+    </tr>
+
+</table>
+
+<p></p>
+<p></p>
+<p align="center">ADD VEHICLE</p>
+
+<form th:action="@{/vehicles/add}" th:object="${newVehicle}" method="post">
+
+    <p align="center">Id: <input type="text" th:field="*{id}"></p>
+    <p align="center">Mark: <input type="text" th:field="*{mark}"></p>
+    <p align="center">Model: <input type="text" th:field="*{model}"></p>
+    <p align="center">Color: <input type="text" th:field="*{color}"></p>
+    <p align="center"><input type="submit" value="ADD"></p>
+
+</form>
+
+</body>
+</html>

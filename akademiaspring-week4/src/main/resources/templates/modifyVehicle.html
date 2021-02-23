@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MODIFY</title>
+</head>
+<body>
+
+<p align="center">MODIFY VEHICLE</p>
+
+<form action="#" th:action="@{/vehicles/getModifyingForm}" th:object="${vehicleToModify}" method="post">
+
+    <p align="center">Id: <input type="text" th:field="*{id}" readonly></p>
+    <p align="center">Mark: <input type="text" th:field="*{mark}"></p>
+    <p align="center">Model: <input type="text" th:field="*{model}"></p>
+    <p align="center">Color: <input type="text" th:field="*{color}"></p>
+    <p align="center"><input type="submit" value="MODIFY"></p>
+
+</form>
+
+</body>
+</html>
