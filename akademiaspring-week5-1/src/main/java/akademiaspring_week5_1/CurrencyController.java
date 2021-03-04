@@ -1,6 +1,5 @@
 package akademiaspring_week5_1;
 
-import com.google.gson.Gson;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
