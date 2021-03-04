@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Currencies</title>
+</head>
+<body>
+
+<p align="center"><b>CURRENCY SERVICE</b></p>
+
+<table align="center" border="5">
+
+    <tr>
+
+        <td>SYMBOL</td>
+        <td>EXCHANGE RATE(USD)</td>
+
+    </tr>
+
+    <tr>
+
+        <td>EUR</td>
+        <td th:text="${currency.getRates.getEUR()}"></td>
+
+
+    </tr>
+
+    <tr>
+
+        <td>PLN</td>
+        <td th:text="${currency.getRates.getPLN()}"></td>
+
+
+    </tr>
+
+    <tr>
+
+        <td>GBP</td>
+        <td th:text="${currency.getRates.getGBP()}"></td>
+
+
+    </tr>
+
+</table>
+
+</body>
+</html>
